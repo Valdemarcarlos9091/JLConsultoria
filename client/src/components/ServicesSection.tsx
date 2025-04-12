@@ -60,7 +60,7 @@ const ServicesSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr gap-8">
-          {services.map((service, index) => (
+          {services.slice(0, 6).map((service, index) => (
             <motion.div
               key={service.id}
               className="service-card bg-secondary rounded-xl p-6 h-full neon-border"
