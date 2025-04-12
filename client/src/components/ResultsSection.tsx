@@ -1,12 +1,7 @@
 import { useRef } from "react";
 import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
-import { 
-  Users, 
-  DollarSign, 
-  Star, 
-  FileText 
-} from "lucide-react";
+import CountUp from "react-countup";
 
 const ResultsSection = () => {
   const ref = useRef(null);
@@ -14,23 +9,27 @@ const ResultsSection = () => {
 
   const results = [
     { 
-      icon: <Users className="w-8 h-8" />, 
-      value: "+30", 
+      value: 30, 
+      prefix: "+",
+      suffix: "",
       label: "Clientes ativos" 
     },
     { 
-      icon: <DollarSign className="w-8 h-8" />, 
-      value: "+500", 
+      value: 500, 
+      prefix: "+",
+      suffix: "",
       label: "Milhões Kz economizados" 
     },
     { 
-      icon: <Star className="w-8 h-8" />, 
-      value: "100%", 
+      value: 100, 
+      prefix: "",
+      suffix: "%",
       label: "Satisfação dos clientes" 
     },
     { 
-      icon: <FileText className="w-8 h-8" />, 
-      value: "+400", 
+      value: 400, 
+      prefix: "+",
+      suffix: "",
       label: "Casos de planejamento fiscal" 
     }
   ];
@@ -47,10 +46,20 @@ const ResultsSection = () => {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="text-primary text-4xl mb-4 flex justify-center">
-                {result.icon}
-              </div>
-              <h3 className="text-4xl font-bold mb-2 text-white">{result.value}</h3>
+              <h3 className="text-4xl font-bold mb-2 text-white">
+                {isInView && (
+                  <>
+                    {result.prefix}
+                    <CountUp 
+                      end={result.value} 
+                      duration={2.5}
+                      separator="."
+                      delay={0.5 + index * 0.1}
+                    />
+                    {result.suffix}
+                  </>
+                )}
+              </h3>
               <p className="text-muted-foreground">{result.label}</p>
             </motion.div>
           ))}

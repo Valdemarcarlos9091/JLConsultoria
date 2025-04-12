@@ -215,7 +215,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Endereço</h4>
-                    <p className="text-muted-foreground">Luanda, Angola</p>
+                    <p className="text-muted-foreground">Rua comandante kwenha Maculusso, Luanda, Angola</p>
                   </div>
                 </div>
                 

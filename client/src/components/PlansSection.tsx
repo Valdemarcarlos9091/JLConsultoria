@@ -33,7 +33,7 @@ const PlansSection = () => {
         "Registro no INSS",
         "30% de desconto em relatórios anuais"
       ],
-      highlighted: false
+      highlighted: true
     },
     {
       name: "Platinum Plan",
@@ -47,7 +47,7 @@ const PlansSection = () => {
         "Registro e vinculação no INSS",
         "50% de desconto em relatórios anuais"
       ],
-      highlighted: true
+      highlighted: false
     }
   ];
 
