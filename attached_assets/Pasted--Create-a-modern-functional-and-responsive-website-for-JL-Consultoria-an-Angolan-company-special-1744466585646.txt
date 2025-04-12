@@ -1,0 +1,202 @@
+✅ Create a modern, functional, and responsive website for JL Consultoria, an Angolan company specialized in accounting, tax, and financial consulting.\
+🗣 Language: Portuguese (Angolan variation)
+
+🎯 Goal: Generate leads and quotes with a focus on conversion.
+
+🧱 Single Page Structure (scrollable with anchors)
+
+1. Hero Section (Top)\
+   Title, subtitle, and CTA button\
+   Dark style with neon accents\
+   Smooth animations
+
+2. Results (Success Indicators)\
+   Cards with:
+
++30 active clients\
++500 million Kz saved\
+100% satisfaction\
++400 tax planning cases
+
+3. Services\
+   Clickable cards with icons and descriptions:
+
+**JL CONSULTORIA structures your company’s accounting with tailored solutions:**\
+Discover all the services we offer to enhance your company’s performance
+
+**Business and Commercial Permit Issuance**\
+✅ Request and renewal of permits\
+✅ Regulatory consulting with relevant authorities\
+✅ Advisory for requirements and documentation
+
+**Company Formation**\
+✅ Selection of appropriate legal regime\
+✅ Commercial registration and INSS enrollment\
+✅ NIF and necessary licenses\
+✅ Legal documents and statutes
+
+**Legal Advisory**\
+✅ Business and corporate law consulting\
+✅ Contract drafting and analysis\
+✅ Conflict resolution and mediation\
+✅ Brand and intellectual property protection
+
+**Human Resources Services**\
+✅ Recruitment and talent selection\
+✅ Worker registration with INSS\
+✅ Payroll and benefits management\
+✅ Staff training and development
+
+**Business Representation**\
+✅ Commercial and institutional intermediation\
+✅ Negotiation with partners and suppliers\
+✅ Representation at fairs and corporate events\
+✅ Bureaucratic and governmental support\
+✅ Defense of business interests
+
+**Accounting Training and Internship**\
+✅ Theoretical and practical accounting training\
+✅ Mastery of Angolan accounting norms (CNCF)\
+✅ Financial management software training
+
+**Monthly Accounting**\
+✅ Financial records and classification\
+✅ Ongoing support and AGT compliance\
+✅ Payroll and social charges\
+✅ Tax assessments and fiscal compliance
+
+**Economic and Financial Feasibility Study**\
+✅ Cost and profitability analysis\
+✅ Financial forecasting and budgeting\
+✅ Risk and opportunity evaluation\
+✅ Performance and sustainability indicators
+
+**Tax Advisory**\
+✅ Strategic tax planning\
+✅ Fiscal and tax regularization\
+✅ Audit and inspection support\
+✅ Tax and compliance consulting
+
+**High Finance Consulting and Negotiation**\
+✅ Strategic financial planning\
+✅ Investment and financing acquisition\
+✅ Market risk management and analysis\
+✅ Financial contracts and partnership negotiations
+
+4. Plans
+
+**Bronze Plan** – 100,000 KZS\
+✅ Monthly accounting\
+✅ Monthly tax assessment\
+✅ Account closure\
+✅ 20% discount on annual reports
+
+**Gold Plan** – 300,000 KZS\
+✅ Monthly accounting\
+✅ Monthly tax assessment\
+✅ Technical annual report\
+✅ Account closure\
+✅ INSS registration\
+✅ 30% discount on annual reports
+
+**Platinum Plan** – 500,000 KZS\
+✅ Monthly accounting\
+✅ Annual tax assessment\
+✅ Technical annual report\
+✅ HR management\
+✅ INSS registration and linkage\
+✅ 50% discount on annual reports
+
+Highlight the Platinum Plan visually\
+Buttons to request a quote
+
+5. Testimonials and Clients\
+   Client logos\
+   2 to 5 testimonials with photos
+
+6. About Us (summary)\
+   Brief history\
+   Mission, Vision, and Values
+
+7. FAQ – Frequently Asked Questions\
+   Format: Accordion (click to open)
+
+Examples:
+
+How long does it take to open a company in Angola?\
+→ Usually 7 to 15 business days, depending on the documents.
+
+Do you work with companies in all provinces?\
+→ Yes! We serve the entire national territory.
+
+What documents are required for a Business Permit?\
+→ Copy of ID, NIF, address proof, and company statutes.
+
+Do monthly plans include full tax support?\
+→ Yes, including declaration submissions and AGT contact.
+
+Is the service in-person or online?\
+→ Both! We offer office and WhatsApp-based service.
+
+👉 Add more based on real client questions.
+
+8. Contact\
+   Form: Name, Email, Phone, Message\
+   Floating WhatsApp: +244922378820\
+   Google Maps integration\
+   Social links: Facebook, Instagram, LinkedIn
+
+⚙️ Technical Features
+
+Dark/Light mode toggle\
+Fully responsive layout\
+Local SEO for Angola\
+Performance: Lazy Load, WebP images, cache\
+Analytics and security\
+Hosting: Cloudflare Pages or Vercel
+
+💻 Tech Stack
+
+Frontend: Next.js + React\
+Style: Tailwind CSS (dark theme with neon green)\
+Form: Light backend (Node.js/Express or Supabase Functions)\
+\
+🔧 Recommended Additions
+
+1. FAQ Section ✅
+
+**Frequently Asked Questions**
+
+1. What documents are needed to open a company?
+2. Does JL Consultoria serve clients outside Luanda?
+3. Are services billed monthly or per project?
+4. How does WhatsApp support work?
+5. Does the consulting include only accounting or legal too?
+   ➡️ Reduces doubts and boosts conversions
+
+Can be a modal or anchored section
+
+3. Clear Header CTA\
+   Sticky button like "Request Quote" or "Speak with a Specialist" improves clicks
+
+4. Local SEO\
+   Add geographic meta tags\
+   Use local keywords: consulting in Luanda, accounting in Angola
+
+5. Footer with Key Info\
+   Company Name\
+   Email: [geral.jlconsultoria@gmail.com](mailto\:geral.jlconsultoria@gmail.com)\
+   WhatsApp: +244 922 378 820\
+   Clickable social media icons\
+   Address (if available)
+
+🖌 Visual Style
+
+Main background: #0B0C10 (dark blue-black)\
+Secondary cards: #131419 (dark gray)\
+Highlight color: #00FFA3 (neon green)\
+Secondary text: #B0B0B0 (light gray)\
+Font: Sans-serif (clean and modern)\
+Card borders: border border-[#00FFA3]\
+Icons and checkmarks: neon color
+
