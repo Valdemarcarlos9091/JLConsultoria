@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 14% 4%;
+    --foreground: 0 0% 100%;
+    --card: 222 13% 9%;
+    --card-foreground: 0 0% 100%;
+    --popover: 222 13% 9%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 158 100% 50%;
+    --primary-foreground: 222 47% 11%;
+    --secondary: 222 13% 9%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 14% 25%;
+    --muted-foreground: 0 0% 69%;
+    --accent: 220 14% 11%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 14% 15%;
+    --input: 220 14% 15%;
+    --ring: 158 100% 50%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-primary shadow-[0_0_8px_rgba(0,255,163,0.3)];
+  }
+
+  .neon-text {
+    @apply text-primary drop-shadow-[0_0_5px_rgba(0,255,163,0.7)];
+  }
+
+  .service-card {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,255,163,0.15)];
+  }
+
+  .plan-card {
+    @apply transition-all duration-300 hover:-translate-y-1;
+  }
+
+  .highlighted-plan {
+    @apply border-2 border-primary shadow-[0_0_15px_rgba(0,255,163,0.4)];
+  }
+
+  .cta-button {
+    @apply bg-gradient-to-r from-primary to-[#00E088] text-black font-bold py-3 px-8 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_7px_15px_rgba(0,255,163,0.3)];
+  }
+
+  .animate-fadeIn {
+    @apply opacity-0 translate-y-5;
+  }
+}
