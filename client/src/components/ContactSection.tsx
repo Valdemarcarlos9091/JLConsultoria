@@ -13,7 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { ContactFormData } from "@/types/contact";
-import { MapPin, Mail, Phone, Facebook, Instagram, Linkedin } from "lucide-react";
+import { MapPin, Mail, Phone, Facebook, Instagram, Linkedin, Send } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(3, { message: "Nome deve ter pelo menos 3 caracteres" }),
@@ -62,7 +62,31 @@ const ContactSection = () => {
     },
   });
 
+  // Função para enviar mensagem via WhatsApp
+  const sendWhatsAppMessage = (data: ContactFormData) => {
+    const whatsappNumber = "244922378820"; // Número de WhatsApp da empresa
+    const message = encodeURIComponent(`*Contato via site JL Consultoria*\n\n*Nome:* ${data.name}\n*Email:* ${data.email}\n*Telefone:* ${data.phone}\n\n*Mensagem:*\n${data.message}`);
+    
+    // Abre o WhatsApp com a mensagem pré-preenchida
+    window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
+    
+    // Exibe uma mensagem de sucesso
+    toast({
+      title: "Redirecionando para WhatsApp",
+      description: "Complete o envio no aplicativo do WhatsApp",
+      variant: "default",
+    });
+    
+    // Reseta o formulário
+    form.reset();
+  };
+
+  // Função que trata o envio do formulário
   function onSubmit(data: ContactFormData) {
+    // Envia via WhatsApp diretamente ao invés de usar a API
+    sendWhatsAppMessage(data);
+    
+    // Armazena a mensagem no banco de dados também (opcional)
     mutation.mutate(data);
   }
 
@@ -192,9 +216,21 @@ const ContactSection = () => {
                   )}
                 />
                 
-                <Button type="submit" className="cta-button w-full" disabled={mutation.isPending}>
-                  {mutation.isPending ? "Enviando..." : "Enviar Mensagem"}
+                <Button type="submit" className="cta-button w-full group" disabled={mutation.isPending}>
+                  {mutation.isPending ? (
+                    "Enviando..."
+                  ) : (
+                    <>
+                      <span className="flex items-center justify-center gap-2">
+                        Enviar via WhatsApp
+                        <Send size={16} className="ml-1 group-hover:translate-x-1 transition-transform duration-300" />
+                      </span>
+                    </>
+                  )}
                 </Button>
+                <p className="text-xs text-center text-muted-foreground mt-3">
+                  Ao enviar, você será redirecionado para o WhatsApp com sua mensagem
+                </p>
               </form>
             </Form>
           </motion.div>

@@ -98,6 +98,7 @@ const Header = ({ activeSection }: HeaderProps) => {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               whileHover={!link.isButton ? { scale: 1.05 } : undefined}
             >
+              {link.icon && link.icon}
               {link.label}
               {!link.isButton && (
                 <motion.span 
@@ -153,7 +154,10 @@ const Header = ({ activeSection }: HeaderProps) => {
                   transition={{ delay: 0.1 + index * 0.1 }}
                   whileHover={{ x: 5 }}
                 >
-                  {link.label}
+                  <span className="flex items-center gap-2">
+                    {link.icon && link.icon}
+                    {link.label}
+                  </span>
                 </motion.a>
               ))}
             </motion.div>
