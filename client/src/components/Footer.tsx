@@ -1,5 +1,5 @@
 import { Logo } from "@/components/ui/logo";
-import { Facebook, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,6 +38,14 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-bold mb-6">Contato</h4>
             <ul className="space-y-3">
+              <li className="flex items-start">
+                <span className="text-primary mr-2 mt-1">
+                  <MapPin className="w-4 h-4" />
+                </span>
+                <span className="text-muted-foreground">
+                  Rua comandante kwenha Maculusso, Luanda, Angola
+                </span>
+              </li>
               <li className="flex items-center">
                 <span className="text-primary mr-2">
                   <Mail className="w-4 h-4" />
