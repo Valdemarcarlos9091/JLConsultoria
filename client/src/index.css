@@ -67,4 +67,25 @@
   .animate-fadeIn {
     @apply opacity-0 translate-y-5;
   }
+
+  .neon-border-hover {
+    @apply transition-all duration-500 border border-transparent hover:border-primary hover:shadow-[0_0_10px_rgba(0,255,163,0.4)];
+  }
+
+  .parallax-bg {
+    @apply absolute top-0 left-0 w-full h-full pointer-events-none z-0;
+  }
+
+  .glow-effect {
+    @apply relative;
+  }
+  
+  .glow-effect::after {
+    content: '';
+    @apply absolute inset-0 rounded-lg opacity-0 transition-opacity duration-500 bg-primary/20 blur-md -z-10;
+  }
+  
+  .glow-effect:hover::after {
+    @apply opacity-100;
+  }
 }
