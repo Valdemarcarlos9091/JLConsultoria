@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, PhoneCall } from "lucide-react";
 import { Logo } from "@/components/ui/logo";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -40,6 +40,8 @@ const Header = ({ activeSection }: HeaderProps) => {
     setMobileMenuOpen(false);
   };
 
+  const phoneNumber = "+244 900 000 000"; // Número de telefone da empresa
+  
   const navLinks = [
     { href: "#inicio", label: "Início" },
     { href: "#servicos", label: "Serviços" },
@@ -47,7 +49,12 @@ const Header = ({ activeSection }: HeaderProps) => {
     { href: "#clientes", label: "Clientes" },
     { href: "#sobre", label: "Sobre" },
     { href: "#faq", label: "FAQ" },
-    { href: "#contato", label: "Contato", isButton: true },
+    { 
+      href: `tel:${phoneNumber.replace(/\s/g, '')}`, 
+      label: "Ligar Agora", 
+      isButton: true,
+      icon: <PhoneCall size={16} className="animate-pulse" />
+    },
   ];
 
   return (
@@ -80,7 +87,7 @@ const Header = ({ activeSection }: HeaderProps) => {
               href={link.href}
               className={`
                 ${link.isButton 
-                  ? "bg-secondary hover:bg-primary hover:text-black px-5 py-2 rounded-full transition-all duration-300 hover:scale-105" 
+                  ? "bg-primary hover:bg-primary/90 text-black px-5 py-2 rounded-full transition-all duration-300 hover:scale-105 flex items-center gap-2" 
                   : `text-white hover:text-primary transition-all duration-300 relative group ${
                       activeSection === link.href.substring(1) ? "text-primary" : ""
                     }`

@@ -7,6 +7,17 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    id: "contabilidade",
+    icon: "calculator",
+    title: "Contabilidade Mensal",
+    features: [
+      "Registo e Classificação de Movimentações Financeiras",
+      "Suporte Contínuo e Conformidade com a AGT",
+      "Gestão de Folha de Pagamento e Encargos Sociais",
+      "Apuramento de Impostos e Cumprimento Fiscal"
+    ]
+  },
+  {
     id: "alvaras",
     icon: "id-card",
     title: "Emissão de Alvarás Comerciais",
@@ -69,17 +80,6 @@ export const services: Service[] = [
       "Formação teórica e prática em contabilidade",
       "Domínio das normas contábeis angolanas (CNCF)",
       "Treinamento em software de gestão financeira"
-    ]
-  },
-  {
-    id: "contabilidade",
-    icon: "calculator",
-    title: "Contabilidade Mensal",
-    features: [
-      "Registros e classificação financeira",
-      "Suporte contínuo e conformidade com AGT",
-      "Folha de pagamento e encargos sociais",
-      "Avaliações fiscais e conformidade fiscal"
     ]
   },
   {
