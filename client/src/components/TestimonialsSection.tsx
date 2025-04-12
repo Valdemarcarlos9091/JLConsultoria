@@ -3,11 +3,22 @@ import { useInView } from "framer-motion";
 import { motion } from "framer-motion";
 import { Quote } from "lucide-react";
 
+// Importando as imagens dos clientes
+import kombateSeguroLogo from "../assets/clients/kombate-seguro.png";
+import smLogo from "../assets/clients/sm-logo.png";
+import mLogo from "../assets/clients/m-logo.png";
+import espacoAplausosLogo from "../assets/clients/espaco-aplausos.png";
+
 const TestimonialsSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
 
-  const clientLogos = Array(6).fill(null).map((_, i) => `Cliente Corporativo ${i + 1}`);
+  const clientLogos = [
+    { name: "Kombate Seguro", logo: kombateSeguroLogo },
+    { name: "SM", logo: smLogo },
+    { name: "M Movimento", logo: mLogo },
+    { name: "Espaço Aplausos", logo: espacoAplausosLogo },
+  ];
   
   const testimonials = [
     {
@@ -46,18 +57,22 @@ const TestimonialsSection = () => {
           </motion.p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {clientLogos.map((logo, index) => (
+        <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 mb-16">
+          {clientLogos.map((client, index) => (
             <motion.div
               key={index}
-              className="bg-secondary rounded-xl p-6 flex items-center justify-center h-32"
+              className="client-logo-container flex items-center justify-center h-20"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
+              whileHover={{ scale: 1.05 }}
             >
-              <div className="text-muted-foreground text-lg font-bold">
-                {logo}
-              </div>
+              <img 
+                src={client.logo} 
+                alt={client.name} 
+                className="h-full object-contain filter brightness-100 max-w-[180px]" 
+                title={client.name}
+              />
             </motion.div>
           ))}
         </div>

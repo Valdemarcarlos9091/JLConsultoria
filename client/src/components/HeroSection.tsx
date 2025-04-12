@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { useInView } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 import { motion } from "framer-motion";
-import { floatingAnimation, neonGlowEffect } from "@/lib/animations";
+import { neonGlowEffect } from "@/lib/animations";
 import heroImage from "../assets/hero-image.png";
 
 // Animação de texto digitado com efeito de máquina de escrever
@@ -156,42 +156,14 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
           
-          <motion.div 
-            className="md:w-1/2 flex justify-center relative"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-            transition={{ 
-              duration: 0.8, 
-              delay: 0.4,
-              type: "spring",
-              stiffness: 100
-            }}
-          >
-            {/* Efeito de resplandecência ao redor da imagem */}
-            <motion.div
-              className="absolute -inset-1 rounded-xl bg-primary/20 blur-xl"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 0.5 } : { opacity: 0 }}
-              transition={{ duration: 1, delay: 0.6 }}
-            />
-            
-            <motion.img 
+          {/* Lado direito com imagem estática sem animações nem contorno */}
+          <div className="md:w-1/2 flex justify-center">
+            <img 
               src={heroImage}
               alt="JL Consultoria" 
-              className="max-w-full h-auto rounded-xl shadow-2xl z-10 relative"
-              initial={{ y: 20 }}
-              variants={floatingAnimation}
-              animate="animate"
+              className="max-w-full h-auto"
             />
-            
-            {/* Decoração de contorno */}
-            <motion.div 
-              className="absolute -inset-2 border-2 border-primary/30 rounded-xl z-0"
-              initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 1, delay: 0.8 }}
-            />
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
