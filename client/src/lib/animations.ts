@@ -57,7 +57,6 @@ export const slideInFromRight = {
   }
 };
 
-// Novas animações mais elaboradas
 export const floatingAnimation = {
   initial: { y: 0 },
   animate: {
@@ -87,10 +86,12 @@ export const pulseEffect = {
 
 export const neonGlowEffect = {
   initial: { 
-    boxShadow: "0 0 5px rgba(0, 255, 163, 0.5), 0 0 10px rgba(0, 255, 163, 0.3)" 
+    color: "#00ffa3",
+    textShadow: "0 0 5px rgba(0, 255, 163, 0.5), 0 0 10px rgba(0, 255, 163, 0.3)" 
   },
   animate: {
-    boxShadow: [
+    color: "#00ffa3",
+    textShadow: [
       "0 0 5px rgba(0, 255, 163, 0.5), 0 0 10px rgba(0, 255, 163, 0.3)",
       "0 0 8px rgba(0, 255, 163, 0.7), 0 0 15px rgba(0, 255, 163, 0.5)",
       "0 0 5px rgba(0, 255, 163, 0.5), 0 0 10px rgba(0, 255, 163, 0.3)"

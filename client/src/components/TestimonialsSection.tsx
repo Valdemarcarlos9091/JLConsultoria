@@ -23,15 +23,15 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       text: "A JL Consultoria transformou completamente a contabilidade da nossa empresa. Economizamos tempo e recursos significativos com o planejamento tributário estratégico que eles implementaram.",
-      initials: "MB",
-      name: "Manuel Barbosa",
-      position: "Diretor Executivo, Empresa de Tecnologia"
+      initials: "KS",
+      name: "Kombate Seguro",
+      position: "Empresa de Segurança Privada"
     },
     {
       text: "Desde que contratamos a JL Consultoria para nossos serviços contábeis, temos experimentado uma melhoria significativa em nossa gestão financeira. Eles são profissionais, eficientes e proativos.",
-      initials: "IS",
-      name: "Isabel Santos",
-      position: "Gerente Financeira, Comércio Varejista"
+      initials: "EA",
+      name: "Espaço Aplausos",
+      position: "Largo Culturar do Sequele"
     }
   ];
 
